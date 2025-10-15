@@ -8,8 +8,8 @@ class Player:
         self.BaseAttack = 1
         self.BaseDefense = 0
 
-        self.WeaponsInv = {}
-        self.EquippedWeapon = weapons.RustySword(2)
+        self.EquippedWeapon = None
+        self.WeaponsInv = []
 
         self.CurrentShop = []
 
