@@ -21,11 +21,12 @@ def TravellingGuy(Player):
             print(i + '\n')
     Location = input('Where do you want to go \n')
     if Location not in AllowedLocations:
-        while Location not in AllowedLocations:
+        while Location not in AllowedLocations: # pick new location if location not real or not accessable
             print('Pick new Location')
             Location = input('Where do you want to go \n')
+        fight.Fight(Player, Location) # go to the fight area
     else:
-        fight.Fight(Player)
+        fight.Fight(Player, Location)
 
 
 def Town(Player):
