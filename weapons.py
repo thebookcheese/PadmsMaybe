@@ -4,11 +4,12 @@ import math
 # Rarities = Rusty, Common, Rare, Legendary
 # Rusty should be able to be cleaned?
 class Sword:
-    def Stab(self, EnemyDodgeChance, EnemyName, player):
+    def Stab(self, EnemyDodgeChance, EnemyName, Player):
         if random.randint(0, 100) > EnemyDodgeChance:
-            return math.round(random.uniform(self.Attack-0.5, self.Attack+0.5)) + player.BaseAttack   # add damage logic here
+            return round(random.uniform(self.Attack-0.5, self.Attack+0.5)) + Player.BaseAttack   # add damage logic here
         else:
             print(f'The {EnemyName} dodged')
+            return None
     
     type = 'Sword'
     NumOfAttacks = 2
